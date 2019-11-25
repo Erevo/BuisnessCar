@@ -79,43 +79,7 @@ public class Car : MonoBehaviour
         FMotor.motorSpeed = Speed;
         RMotor.motorSpeed = Speed;
 
-
-
-        if (!shift)
-        {
-            FWheel.useMotor = true;
-            RWheel.useMotor = true;
-        }
-        else
-        {
-            FWheel.useMotor = false;
-            RWheel.useMotor = false;
-        }
-
-
         RMotor.maxMotorTorque = maxTorque;
         FMotor.maxMotorTorque = maxTorque;
-
-        if (brake != 0)
-        {
-            FMotor.motorSpeed = 0;
-            RMotor.motorSpeed = 0;
-
-            RMotor.maxMotorTorque = 1000000f;
-            FMotor.maxMotorTorque = 1000000f;
-        }
-
-
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            transform.position = Vector3.zero;
-            transform.rotation = Quaternion.Euler(0, 0, 0);
-        }
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawSphere(rb.worldCenterOfMass, 0.1f);
     }
 }
