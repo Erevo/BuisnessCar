@@ -66,9 +66,13 @@ public class Car : MonoBehaviour
         else if (horizontal > 0 && rb.velocity.x > 0)
             transform.localScale = new Vector3(scale.x, transform.localScale.y, transform.localScale.z);
 
-        float radius = GetComponentInChildren<CircleCollider2D>().radius;
+        //Speed = (100 * 283 * 1 / radius) / 60 * maxSpeed * -horizontal;
+        float radius = GetComponentInChildren<CircleCollider2D>().radius * transform.localScale.y * GetComponentsInChildren<Transform>()[1].localScale.y;
 
-        Speed = (100 * 283 * 1 / radius) / 60 * maxSpeed * -horizontal;
+        Debug.Log(GetComponentInChildren<CircleCollider2D>().radius);
+        Debug.Log(GetComponentsInChildren<Transform>()[1].localScale.y);
+
+        Speed = 180 / (radius * 10) * Mathf.PI * maxSpeed / 3.6f * -horizontal;
 
 
 
