@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Buisness : MonoBehaviour
 {
-    [SerializeField] GameObject MaterialPref;
     public int Balance;
-    public int Dohod;
-    public int ChistyDohod;
+    public int Profit;
     public Profile Character;
     public int Materials;
+    [SerializeField] private GameObject materialPref;
+    [SerializeField] private Transform spanwPoint;
     void Start()
     {
         StartCoroutine("Work");
@@ -23,7 +23,7 @@ public class Buisness : MonoBehaviour
             if (Materials > 0)
             {
                 Materials--;
-                Balance += Dohod;
+                Balance += Profit;
                 yield return new WaitForSeconds(1);
             }
             else
@@ -50,11 +50,15 @@ public class Buisness : MonoBehaviour
 
     public void BuyMaterials()
     {
-        if (Balance >= GetComponent<BuisnessUI>().OrderMaterials * 2)
+        int orderMaterials = GetComponent<BuisnessUI>().OrderMaterials;
+        if (orderMaterials > 0)
         {
-            var materials = Instantiate(MaterialPref, new Vector2(0, 5), Quaternion.identity);
-            materials.GetComponent<Materials>().Count = GetComponent<BuisnessUI>().OrderMaterials;
-            Balance -= GetComponent<BuisnessUI>().OrderMaterials * 2;
+            if (Balance >= orderMaterials * 2)
+            {
+                var materials = Instantiate(materialPref, spanwPoint.position, Quaternion.identity);
+                materials.GetComponent<BizMaterials>().Count = orderMaterials;
+                Balance -= orderMaterials * 2;
+            }
         }
     }
 }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5324092551977483343}
   m_Layer: 0
   m_Name: Road
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 7.34, y: 0.79}
+  m_Size: {x: 5000, y: 0.79}
   m_AdaptiveModeThreshold: 0.276
   m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
@@ -94,16 +94,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.021787643, y: -0.065359116}
+  m_Offset: {x: 0.02178669, y: -0.065359116}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.5, y: 0.91}
-    newSize: {x: 7.34, y: 0.79}
+    newSize: {x: 5000, y: 0.79}
     adaptiveTilingThreshold: 0.276
     drawMode: 2
     adaptiveTiling: 1
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.3388224, y: 0.6485598}
+  m_Size: {x: 5000, y: 0.6485598}
   m_EdgeRadius: 0

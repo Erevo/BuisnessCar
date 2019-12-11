@@ -42,7 +42,6 @@ public class Car : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log(rb.centerOfMass);
         if (!GetComponent<CarProfile>().isActive)
         {
             FMotor.motorSpeed = 0;
@@ -53,9 +52,6 @@ public class Car : MonoBehaviour
 
             return;
         }
-        float brake = Input.GetAxis("Jump");
-        bool shift = Input.GetKey(KeyCode.LeftShift);
-
 
         FWheel.motor = FMotor;
         RWheel.motor = RMotor;
@@ -63,14 +59,13 @@ public class Car : MonoBehaviour
         float horizontal = TCKInput.GetAxis("Joystick", EAxisType.Horizontal);
         if (horizontal < 0 && rb.velocity.x < 0)
             transform.localScale = new Vector3(-scale.x, transform.localScale.y, transform.localScale.z);
-        else if (horizontal > 0 && rb.velocity.x > 0)
+        else 
+        if (horizontal > 0 && rb.velocity.x > 0)
             transform.localScale = new Vector3(scale.x, transform.localScale.y, transform.localScale.z);
 
-        //Speed = (100 * 283 * 1 / radius) / 60 * maxSpeed * -horizontal;
         float radius = GetComponentInChildren<CircleCollider2D>().radius * transform.localScale.y * GetComponentsInChildren<Transform>()[1].localScale.y;
 
-        Debug.Log(GetComponentInChildren<CircleCollider2D>().radius);
-        Debug.Log(GetComponentsInChildren<Transform>()[1].localScale.y);
+
 
         Speed = 180 / (radius * 10) * Mathf.PI * maxSpeed / 3.6f * -horizontal;
 
