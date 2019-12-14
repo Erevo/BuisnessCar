@@ -28,18 +28,11 @@ public class Garage : MonoBehaviour
 
     public void SpawnCar(int id)
     {
-        foreach (var car in Cars)
-        {
-            if (car.Id == id)
-            {
-                Car = car;
+        Car = Cars.Find(c => c.Id == id);
 
-                Car.transform.position = SpawnPoint.position;
-                Car.transform.rotation = Quaternion.identity;
-                Car.gameObject.SetActive(true);
-                break;
-            }
-        }
+        Car.transform.position = SpawnPoint.position;
+        Car.transform.rotation = Quaternion.identity;
+        Car.gameObject.SetActive(true);
     }
 
     private void OnTriggerEnter2D(Collider2D coll)
