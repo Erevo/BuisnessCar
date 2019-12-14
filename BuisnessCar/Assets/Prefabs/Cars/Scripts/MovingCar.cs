@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 using System.Threading;
 using TouchControlsKit;
 
-public class Car : MonoBehaviour
+public class MovingCar : MonoBehaviour
 {
     Rigidbody2D rb;
     [SerializeField] Transform centerOfmass;
@@ -59,7 +59,7 @@ public class Car : MonoBehaviour
         float horizontal = TCKInput.GetAxis("Joystick", EAxisType.Horizontal);
         if (horizontal < 0 && rb.velocity.x < 0)
             transform.localScale = new Vector3(-scale.x, transform.localScale.y, transform.localScale.z);
-        else 
+        else
         if (horizontal > 0 && rb.velocity.x > 0)
             transform.localScale = new Vector3(scale.x, transform.localScale.y, transform.localScale.z);
 
@@ -80,5 +80,34 @@ public class Car : MonoBehaviour
 
         RMotor.maxMotorTorque = maxTorque;
         FMotor.maxMotorTorque = maxTorque;
+
+
+        List<int> layers = new List<int>
+        {
+            LayerMask.NameToLayer("Car"),
+            LayerMask.NameToLayer("Ignore Character"),
+        };
+        if (TCKInput.GetAction("jumpBtn", EActionEvent.Down))
+        {
+            int lastLayer = -1;
+            foreach (var layer in layers)
+            {
+                Physics2D.IgnoreLayerCollision(layer, layer, true);
+                if (lastLayer != -1)
+                    Physics2D.IgnoreLayerCollision(layer, lastLayer, true);
+                lastLayer = layer;
+            }
+        }
+        if (TCKInput.GetAction("jumpBtn", EActionEvent.Up))
+        {
+            int lastLayer = -1;
+            foreach (var layer in layers)
+            {
+                Physics2D.IgnoreLayerCollision(layer, layer, false);
+                if (lastLayer != -1)
+                    Physics2D.IgnoreLayerCollision(layer, lastLayer, false);
+                lastLayer = layer;
+            }
+        }
     }
 }

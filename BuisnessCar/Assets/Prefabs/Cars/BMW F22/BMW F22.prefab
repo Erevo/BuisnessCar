@@ -426,6 +426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5e3393c9737cc340a65ce9b6d33fed5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabId: 2
   materialsPoint: {fileID: 7100643105427039183}
   Price: 5000
   Id: 1

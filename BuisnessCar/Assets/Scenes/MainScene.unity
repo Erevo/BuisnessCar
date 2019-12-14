@@ -383,10 +383,55 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1624359031}
     m_Modifications:
+    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1773840559}
+    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyCar
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: BMW F22
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4757330651188409782, guid: d7b2a74671aff3645ad5c34ec36457d3,
         type: 3}
       propertyPath: m_Name
       value: btn_BuyBMW
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421281522985310366, guid: d7b2a74671aff3645ad5c34ec36457d3,
+        type: 3}
+      propertyPath: m_Text
+      value: BMW F22
       objectReference: {fileID: 0}
     - target: {fileID: 8736768708585825585, guid: d7b2a74671aff3645ad5c34ec36457d3,
         type: 3}
@@ -492,46 +537,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1773840559}
-    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: BuyCar
-      objectReference: {fileID: 0}
-    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: BMW F22
-      objectReference: {fileID: 0}
-    - target: {fileID: 8421281522985310366, guid: d7b2a74671aff3645ad5c34ec36457d3,
-        type: 3}
-      propertyPath: m_Text
-      value: BMW F22
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7297641929967239728, guid: d7b2a74671aff3645ad5c34ec36457d3, type: 3}
@@ -640,7 +645,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 457835212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.53, y: 6.16, z: 0}
+  m_LocalPosition: {x: 0.09, y: -0.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1773840558}
@@ -2571,10 +2576,55 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1624359031}
     m_Modifications:
+    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1773840559}
+    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyCar
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Porshe 718
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4757330651188409782, guid: d7b2a74671aff3645ad5c34ec36457d3,
         type: 3}
       propertyPath: m_Name
       value: btn_BuyPorshe
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421281522985310366, guid: d7b2a74671aff3645ad5c34ec36457d3,
+        type: 3}
+      propertyPath: m_Text
+      value: Porshe 718
       objectReference: {fileID: 0}
     - target: {fileID: 8736768708585825585, guid: d7b2a74671aff3645ad5c34ec36457d3,
         type: 3}
@@ -2681,46 +2731,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1773840559}
-    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: BuyCar
-      objectReference: {fileID: 0}
-    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Porshe 718
-      objectReference: {fileID: 0}
-    - target: {fileID: 8421281522985310366, guid: d7b2a74671aff3645ad5c34ec36457d3,
-        type: 3}
-      propertyPath: m_Text
-      value: Porshe 718
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7297641929967239728, guid: d7b2a74671aff3645ad5c34ec36457d3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d7b2a74671aff3645ad5c34ec36457d3, type: 3}
@@ -2731,10 +2741,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6490222683462916244, guid: 2f0af21cf097db7499a772bee28a567f,
+    - target: {fileID: 2989147619322565755, guid: 2f0af21cf097db7499a772bee28a567f,
         type: 3}
-      propertyPath: m_Name
-      value: BMW F22
+      propertyPath: Owner
+      value: 
+      objectReference: {fileID: 1991866495199028}
+    - target: {fileID: 2989147619322565755, guid: 2f0af21cf097db7499a772bee28a567f,
+        type: 3}
+      propertyPath: prefabId
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6490222683462916237, guid: 2f0af21cf097db7499a772bee28a567f,
         type: 3}
@@ -2791,11 +2806,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2989147619322565755, guid: 2f0af21cf097db7499a772bee28a567f,
+    - target: {fileID: 6490222683462916244, guid: 2f0af21cf097db7499a772bee28a567f,
         type: 3}
-      propertyPath: Owner
-      value: 
-      objectReference: {fileID: 1991866495199028}
+      propertyPath: m_Name
+      value: BMW F22
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f0af21cf097db7499a772bee28a567f, type: 3}
 --- !u!1 &1773840556
@@ -2892,11 +2907,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72eac2fdd14993340988129282db8447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnPoint: {fileID: 457835212}
+  spawnPoint: {fileID: 457835213}
   CarsCatalog:
-  - {fileID: 6490222683462916244, guid: 2f0af21cf097db7499a772bee28a567f, type: 3}
-  - {fileID: 6490222683462916244, guid: 9f2e1cf1e5847e34e8b7e6428bcedb8a, type: 3}
-  - {fileID: 6490222683462916244, guid: 453cd400bd2fd874881ee5776253e893, type: 3}
+  - {fileID: 2503652639873362873, guid: 453cd400bd2fd874881ee5776253e893, type: 3}
+  - {fileID: 816819489912608416, guid: 9f2e1cf1e5847e34e8b7e6428bcedb8a, type: 3}
+  - {fileID: 2989147619322565755, guid: 2f0af21cf097db7499a772bee28a567f, type: 3}
   Character: {fileID: 1991866495199028}
 --- !u!114 &1786058890 stripped
 MonoBehaviour:
@@ -3741,10 +3756,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1624359031}
     m_Modifications:
+    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1773840559}
+    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyCar
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Dodge Caravan
+      objectReference: {fileID: 0}
     - target: {fileID: 4757330651188409782, guid: d7b2a74671aff3645ad5c34ec36457d3,
         type: 3}
       propertyPath: m_Name
       value: btn_BuyDodge
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421281522985310366, guid: d7b2a74671aff3645ad5c34ec36457d3,
+        type: 3}
+      propertyPath: m_Text
+      value: Dodge Caravan
       objectReference: {fileID: 0}
     - target: {fileID: 8736768708585825585, guid: d7b2a74671aff3645ad5c34ec36457d3,
         type: 3}
@@ -3851,46 +3906,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1773840559}
-    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: BuyCar
-      objectReference: {fileID: 0}
-    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2016690598351990132, guid: d7b2a74671aff3645ad5c34ec36457d3,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Dodge Caravan
-      objectReference: {fileID: 0}
-    - target: {fileID: 8421281522985310366, guid: d7b2a74671aff3645ad5c34ec36457d3,
-        type: 3}
-      propertyPath: m_Text
-      value: Dodge Caravan
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7297641929967239728, guid: d7b2a74671aff3645ad5c34ec36457d3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d7b2a74671aff3645ad5c34ec36457d3, type: 3}
@@ -3929,6 +3944,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2116218674 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1915901888074474694, guid: 6424ed05a7829954ca0bdcb159406924,
+    type: 3}
+  m_PrefabInstance: {fileID: 1924869707157688972}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1991866495199028 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3341537813762165311, guid: 49e6df9aa67c76f4eb4cab5eb553fdc3,
@@ -3948,11 +3969,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6301645305676383028, guid: 6424ed05a7829954ca0bdcb159406924,
-        type: 3}
-      propertyPath: m_Name
-      value: Garage
-      objectReference: {fileID: 0}
     - target: {fileID: 510083413316091141, guid: 6424ed05a7829954ca0bdcb159406924,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4010,9 +4026,65 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5577060775463928198, guid: 6424ed05a7829954ca0bdcb159406924,
         type: 3}
+      propertyPath: Cars.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5577060775463928198, guid: 6424ed05a7829954ca0bdcb159406924,
+        type: 3}
+      propertyPath: CarPrefabs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5577060775463928198, guid: 6424ed05a7829954ca0bdcb159406924,
+        type: 3}
       propertyPath: Content
       value: 
       objectReference: {fileID: 1424637362}
+    - target: {fileID: 5577060775463928198, guid: 6424ed05a7829954ca0bdcb159406924,
+        type: 3}
+      propertyPath: Cars.Array.data[0]
+      value: 
+      objectReference: {fileID: 2503652639873362873, guid: 453cd400bd2fd874881ee5776253e893,
+        type: 3}
+    - target: {fileID: 5577060775463928198, guid: 6424ed05a7829954ca0bdcb159406924,
+        type: 3}
+      propertyPath: Cars.Array.data[1]
+      value: 
+      objectReference: {fileID: 2989147619322565755, guid: 2f0af21cf097db7499a772bee28a567f,
+        type: 3}
+    - target: {fileID: 5577060775463928198, guid: 6424ed05a7829954ca0bdcb159406924,
+        type: 3}
+      propertyPath: Cars.Array.data[2]
+      value: 
+      objectReference: {fileID: 816819489912608416, guid: 9f2e1cf1e5847e34e8b7e6428bcedb8a,
+        type: 3}
+    - target: {fileID: 5577060775463928198, guid: 6424ed05a7829954ca0bdcb159406924,
+        type: 3}
+      propertyPath: CarPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 6490222683462916244, guid: 453cd400bd2fd874881ee5776253e893,
+        type: 3}
+    - target: {fileID: 5577060775463928198, guid: 6424ed05a7829954ca0bdcb159406924,
+        type: 3}
+      propertyPath: CarPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 6490222683462916244, guid: 9f2e1cf1e5847e34e8b7e6428bcedb8a,
+        type: 3}
+    - target: {fileID: 5577060775463928198, guid: 6424ed05a7829954ca0bdcb159406924,
+        type: 3}
+      propertyPath: CarPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 6490222683462916244, guid: 2f0af21cf097db7499a772bee28a567f,
+        type: 3}
+    - target: {fileID: 5577060775463928198, guid: 6424ed05a7829954ca0bdcb159406924,
+        type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 2116218674}
+    - target: {fileID: 6301645305676383028, guid: 6424ed05a7829954ca0bdcb159406924,
+        type: 3}
+      propertyPath: m_Name
+      value: Garage
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6424ed05a7829954ca0bdcb159406924, type: 3}
 --- !u!1001 &3909277929743582608
@@ -4091,11 +4163,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3341537813762165311, guid: 49e6df9aa67c76f4eb4cab5eb553fdc3,
+        type: 3}
+      propertyPath: Cars.Array.data[0]
+      value: 
+      objectReference: {fileID: 1786058890}
+    - target: {fileID: 3341537813762165311, guid: 49e6df9aa67c76f4eb4cab5eb553fdc3,
+        type: 3}
+      propertyPath: Money
+      value: 100000
+      objectReference: {fileID: 0}
     - target: {fileID: 5700257863766174928, guid: 49e6df9aa67c76f4eb4cab5eb553fdc3,
         type: 3}
       propertyPath: m_Name
       value: CharacterController
       objectReference: {fileID: 0}
+    - target: {fileID: 5700257863766174933, guid: 49e6df9aa67c76f4eb4cab5eb553fdc3,
+        type: 3}
+      propertyPath: balance
+      value: 
+      objectReference: {fileID: 1102002938}
+    - target: {fileID: 5700257863766174934, guid: 49e6df9aa67c76f4eb4cab5eb553fdc3,
+        type: 3}
+      propertyPath: speedcanv
+      value: 
+      objectReference: {fileID: 647832241}
     - target: {fileID: 5700257863766174935, guid: 49e6df9aa67c76f4eb4cab5eb553fdc3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4151,21 +4243,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5700257863766174934, guid: 49e6df9aa67c76f4eb4cab5eb553fdc3,
-        type: 3}
-      propertyPath: speedcanv
-      value: 
-      objectReference: {fileID: 647832241}
-    - target: {fileID: 5700257863766174933, guid: 49e6df9aa67c76f4eb4cab5eb553fdc3,
-        type: 3}
-      propertyPath: balance
-      value: 
-      objectReference: {fileID: 1102002938}
-    - target: {fileID: 3341537813762165311, guid: 49e6df9aa67c76f4eb4cab5eb553fdc3,
-        type: 3}
-      propertyPath: Cars.Array.data[0]
-      value: 
-      objectReference: {fileID: 1786058890}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49e6df9aa67c76f4eb4cab5eb553fdc3, type: 3}
 --- !u!1 &6568779566631733944

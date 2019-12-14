@@ -22,7 +22,7 @@ public class BizMaterials : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 8)
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Car"))
         {
             trunk = collision.gameObject.GetComponent<CarTrunk>();
 
@@ -42,7 +42,7 @@ public class BizMaterials : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.layer == 11)
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Buisness"))
         {
             if (trunk != null) trunk.IsUsed = false;
             collision.gameObject.GetComponent<Buisness>().Materials += Count;

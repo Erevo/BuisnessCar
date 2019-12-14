@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class CarButtonScr : MonoBehaviour
 {
-    public int Id;
+    public int prefabId;
 }

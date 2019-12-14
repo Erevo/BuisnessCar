@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class Garage : MonoBehaviour
 {
-    [SerializeField] Transform SpawnPoint;
+    [SerializeField] List<GameObject> CarPrefabs;
+
+    [SerializeField] Transform spawnPoint;
     [SerializeField] List<CarProfile> Cars;
 
 
@@ -13,53 +15,52 @@ public class Garage : MonoBehaviour
     [SerializeField] RectTransform Content;
 
 
-    PlayerCar PlayerCar;
-    CarProfile Car;
-    void Start()
+    PlayerCarController PlayerCarController;
+    private void Start()
     {
-        PlayerCar = GameObject.Find("CharacterController").GetComponent<PlayerCar>();
+        PlayerCarController = GameObject.Find("CharacterController").GetComponent<PlayerCarController>();
     }
 
 
-    void Update()
+    public void SpawnCar(int prefabId)
     {
+        Profile player = GameObject.FindGameObjectWithTag("Player").GetComponent<Profile>();
+        var car = Instantiate(CarPrefabs.Find(c => c.GetComponent<CarProfile>().prefabId == prefabId));
+        car.transform.position = spawnPoint.position;
+        car.transform.rotation = Quaternion.identity;
+        car.GetComponent<CarProfile>().Owner = player;
+        player.Cars.Add(car.GetComponent<CarProfile>());
 
+
+        //Car = Cars.Find(c => c.Id == id);
+        //Car.transform.position = SpawnPoint.position;
+        //Car.transform.rotation = Quaternion.identity;
+        //Car.gameObject.SetActive(true);
     }
 
-    public void SpawnCar(int id)
+    private void OnTriggerStay2D(Collider2D coll)
     {
-        Car = Cars.Find(c => c.Id == id);
-
-        Car.transform.position = SpawnPoint.position;
-        Car.transform.rotation = Quaternion.identity;
-        Car.gameObject.SetActive(true);
-    }
-
-    private void OnTriggerEnter2D(Collider2D coll)
-    {
-        if (coll.gameObject.layer == 8)
+        if (coll.gameObject.layer == LayerMask.NameToLayer("Car"))
         {
-            Car = coll.gameObject.GetComponent<CarProfile>();
-            Cars.Add(Car);
+            var car = coll.gameObject.GetComponent<CarProfile>();
+            if (car.isActive == true)
+                return;
 
-            if (Car.isActive)
-                PlayerCar.LeaveCar();
-
-            Car.gameObject.SetActive(false);
-            CreateUiButton();
+            Cars.Add(car);
+            Destroy(car.gameObject);
+            CreateUiButton(car);
         }
     }
-
-    void CreateUiButton()
+    void CreateUiButton(CarProfile car)
     {
         var instance = GameObject.Instantiate(Item.gameObject, Content.transform);
         var text = instance.GetComponentInChildren<Text>();
-        text.text = $" [{Car.Id}] {Car.Name}";
-        instance.GetComponent<CarButtonScr>().Id = Car.Id;
+        text.text = $" {car.Name}";
+        instance.GetComponent<CarButtonScr>().prefabId = car.prefabId;
 
         instance.GetComponent<Button>().onClick.AddListener(() =>
         {
-            SpawnCar(instance.GetComponent<CarButtonScr>().Id);
+            SpawnCar(instance.GetComponent<CarButtonScr>().prefabId);
             Destroy(instance);
         });
     }

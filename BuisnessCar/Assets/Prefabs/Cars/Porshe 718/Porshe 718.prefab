@@ -286,7 +286,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 9.7
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5f9ee9d58e7ecb943a958871d4ba682f, type: 2}
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -466,6 +466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5e3393c9737cc340a65ce9b6d33fed5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabId: 1
   materialsPoint: {fileID: 5384161401980652355}
   Price: 9000
   Id: -1
