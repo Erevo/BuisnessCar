@@ -2,40 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class Garage : MonoBehaviour
 {
-    [SerializeField] List<GameObject> CarPrefabs;
+    [SerializeField]public List<GameObject> CarPrefabs;
 
     [SerializeField] Transform spawnPoint;
-    [SerializeField] List<CarProfile> Cars;
+    [SerializeField] public List<int> CarsInGarage;
 
 
     [SerializeField] RectTransform Item;
     [SerializeField] RectTransform Content;
 
-
-    PlayerCarController PlayerCarController;
+    Profile player;
     private void Start()
     {
-        PlayerCarController = GameObject.Find("CharacterController").GetComponent<PlayerCarController>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Profile>();
     }
 
 
     public void SpawnCar(int prefabId)
     {
-        Profile player = GameObject.FindGameObjectWithTag("Player").GetComponent<Profile>();
         var car = Instantiate(CarPrefabs.Find(c => c.GetComponent<CarProfile>().prefabId == prefabId));
         car.transform.position = spawnPoint.position;
         car.transform.rotation = Quaternion.identity;
         car.GetComponent<CarProfile>().Owner = player;
         player.Cars.Add(car.GetComponent<CarProfile>());
-
-
-        //Car = Cars.Find(c => c.Id == id);
-        //Car.transform.position = SpawnPoint.position;
-        //Car.transform.rotation = Quaternion.identity;
-        //Car.gameObject.SetActive(true);
     }
 
     private void OnTriggerStay2D(Collider2D coll)
@@ -46,12 +39,14 @@ public class Garage : MonoBehaviour
             if (car.isActive == true)
                 return;
 
-            Cars.Add(car);
+            player.Cars.Remove(car);
+
+            CarsInGarage.Add(car.prefabId);
             Destroy(car.gameObject);
             CreateUiButton(car);
         }
     }
-    void CreateUiButton(CarProfile car)
+    public void CreateUiButton(CarProfile car)
     {
         var instance = GameObject.Instantiate(Item.gameObject, Content.transform);
         var text = instance.GetComponentInChildren<Text>();

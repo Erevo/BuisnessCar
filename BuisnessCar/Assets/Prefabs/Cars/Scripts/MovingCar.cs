@@ -110,4 +110,9 @@ public class MovingCar : MonoBehaviour
             }
         }
     }
+
+    //private void OnDrawGizmos()
+    //{
+    //        Gizmos.DrawSphere(rb.worldCenterOfMass, 0.3f);
+    //}
 }
