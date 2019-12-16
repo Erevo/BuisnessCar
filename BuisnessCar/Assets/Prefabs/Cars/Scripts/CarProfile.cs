@@ -10,5 +10,5 @@ public class CarProfile : MonoBehaviour
     public int Id;
     public string Name;
     public Profile Owner;
-    public bool isActive = false;
+    public bool isActive;
 }

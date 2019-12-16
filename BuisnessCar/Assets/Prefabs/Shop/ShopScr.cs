@@ -16,6 +16,7 @@ public class ShopScr : MonoBehaviour
     public void BuyCar(int prefabId)
     {
         var ChoosedCar = CarsCatalog.Find(car => car.prefabId == prefabId);
+        ChoosedCar.Id = player.Cars.Count + 1;
 
         if (player.Money < ChoosedCar.GetComponent<CarProfile>().Price)
             return;
@@ -23,8 +24,6 @@ public class ShopScr : MonoBehaviour
             player.Money -= ChoosedCar.GetComponent<CarProfile>().Price;
 
         SpawnCar(ChoosedCar);
-
-
     }
 
     public void SpawnCar(CarProfile carProfile)

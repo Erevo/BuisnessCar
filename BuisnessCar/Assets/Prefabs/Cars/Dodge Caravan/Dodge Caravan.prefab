@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1604354341}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: MaterialsPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -471,7 +471,7 @@ MonoBehaviour:
   prefabId: 0
   materialsPoint: {fileID: 1604354341}
   Price: 10000
-  Id: 0
+  Id: -1
   Name: Dodge Caravan
   Owner: {fileID: 0}
   isActive: 0
@@ -617,7 +617,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6245529197876757838}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: CenterOfmass
   m_TagString: Untagged
   m_Icon: {fileID: 0}

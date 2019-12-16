@@ -429,7 +429,7 @@ MonoBehaviour:
   prefabId: 2
   materialsPoint: {fileID: 7100643105427039183}
   Price: 5000
-  Id: 1
+  Id: -1
   Name: BMW F22
   Owner: {fileID: 0}
   isActive: 0
