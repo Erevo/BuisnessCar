@@ -6,6 +6,6 @@ PhysicsMaterial2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WheelMat 1
-  friction: 10
+  m_Name: BMWwheelMaterial
+  friction: 5
   bounciness: 0

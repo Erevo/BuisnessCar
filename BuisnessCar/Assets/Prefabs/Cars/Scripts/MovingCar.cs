@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 using System.Threading;
 using TouchControlsKit;
 
-public class Car : MonoBehaviour
+public class MovingCar : MonoBehaviour
 {
     Rigidbody2D rb;
     [SerializeField] Transform centerOfmass;
@@ -42,7 +42,6 @@ public class Car : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log(rb.centerOfMass);
         if (!GetComponent<CarProfile>().isActive)
         {
             FMotor.motorSpeed = 0;
@@ -53,9 +52,6 @@ public class Car : MonoBehaviour
 
             return;
         }
-        float brake = Input.GetAxis("Jump");
-        bool shift = Input.GetKey(KeyCode.LeftShift);
-
 
         FWheel.motor = FMotor;
         RWheel.motor = RMotor;
@@ -63,12 +59,15 @@ public class Car : MonoBehaviour
         float horizontal = TCKInput.GetAxis("Joystick", EAxisType.Horizontal);
         if (horizontal < 0 && rb.velocity.x < 0)
             transform.localScale = new Vector3(-scale.x, transform.localScale.y, transform.localScale.z);
-        else if (horizontal > 0 && rb.velocity.x > 0)
+        else
+        if (horizontal > 0 && rb.velocity.x > 0)
             transform.localScale = new Vector3(scale.x, transform.localScale.y, transform.localScale.z);
 
-        float radius = GetComponentInChildren<CircleCollider2D>().radius;
+        float radius = GetComponentInChildren<CircleCollider2D>().radius * transform.localScale.y * GetComponentsInChildren<Transform>()[1].localScale.y;
 
-        Speed = (100 * 283 * 1 / radius) / 60 * maxSpeed * -horizontal;
+
+
+        Speed = 180 / (radius * 10) * Mathf.PI * maxSpeed / 3.6f * -horizontal;
 
 
 
@@ -79,43 +78,41 @@ public class Car : MonoBehaviour
         FMotor.motorSpeed = Speed;
         RMotor.motorSpeed = Speed;
 
-
-
-        if (!shift)
-        {
-            FWheel.useMotor = true;
-            RWheel.useMotor = true;
-        }
-        else
-        {
-            FWheel.useMotor = false;
-            RWheel.useMotor = false;
-        }
-
-
         RMotor.maxMotorTorque = maxTorque;
         FMotor.maxMotorTorque = maxTorque;
 
-        if (brake != 0)
-        {
-            FMotor.motorSpeed = 0;
-            RMotor.motorSpeed = 0;
 
-            RMotor.maxMotorTorque = 1000000f;
-            FMotor.maxMotorTorque = 1000000f;
+        List<int> layers = new List<int>
+        {
+            LayerMask.NameToLayer("Car"),
+            LayerMask.NameToLayer("Ignore Character"),
+        };
+        if (TCKInput.GetAction("jumpBtn", EActionEvent.Down))
+        {
+            int lastLayer = -1;
+            foreach (var layer in layers)
+            {
+                Physics2D.IgnoreLayerCollision(layer, layer, true);
+                if (lastLayer != -1)
+                    Physics2D.IgnoreLayerCollision(layer, lastLayer, true);
+                lastLayer = layer;
+            }
         }
-
-
-
-        if (Input.GetKeyDown(KeyCode.R))
+        if (TCKInput.GetAction("jumpBtn", EActionEvent.Up))
         {
-            transform.position = Vector3.zero;
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            int lastLayer = -1;
+            foreach (var layer in layers)
+            {
+                Physics2D.IgnoreLayerCollision(layer, layer, false);
+                if (lastLayer != -1)
+                    Physics2D.IgnoreLayerCollision(layer, lastLayer, false);
+                lastLayer = layer;
+            }
         }
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawSphere(rb.worldCenterOfMass, 0.1f);
-    }
+    //private void OnDrawGizmos()
+    //{
+    //        Gizmos.DrawSphere(rb.worldCenterOfMass, 0.3f);
+    //}
 }

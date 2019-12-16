@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TouchControlsKit;
 
-public class PlayerCar : MonoBehaviour
+public class PlayerCarController : MonoBehaviour
 {
     GameObject characher;
     CircleCollider2D trigger;

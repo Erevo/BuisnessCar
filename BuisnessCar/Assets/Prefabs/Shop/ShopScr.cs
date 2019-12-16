@@ -4,30 +4,36 @@ using UnityEngine;
 
 public class ShopScr : MonoBehaviour
 {
-    [SerializeField] GameObject SpawnPoint;
-    [SerializeField] List<GameObject> CarsCatalog;
-    [SerializeField] Profile Character;
+    [SerializeField] Transform spawnPoint;
+    [SerializeField] List<CarProfile> CarsCatalog;
+    [SerializeField] Garage garage;
+    Profile player;
 
-    public void BuyCar(string carName)
+
+    private void Start()
     {
-        var ChoosedCar = CarsCatalog.Find(car => car.name == carName);
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Profile>();
+    }
+    public void BuyCar(int prefabId)
+    {
+        var ChoosedCar = CarsCatalog.Find(car => car.prefabId == prefabId);
+        ChoosedCar.Id = garage.CarsInGarage.Count + 1;
 
-        if (Character.Money < ChoosedCar.GetComponent<CarProfile>().Price)
+        if (player.Money < ChoosedCar.GetComponent<CarProfile>().Price)
             return;
         else
-            Character.Money -= ChoosedCar.GetComponent<CarProfile>().Price;
+            player.Money -= ChoosedCar.GetComponent<CarProfile>().Price;
 
-        var NewCar = Instantiate(ChoosedCar, SpawnPoint.transform.position, Quaternion.identity);
+        SpawnCar(ChoosedCar);
+    }
 
-        CarProfile NewCarProfile = NewCar.GetComponent<CarProfile>();
+    public void SpawnCar(CarProfile carProfile)
+    {
+        var car = Instantiate(carProfile.gameObject);
+        car.transform.position = spawnPoint.position;
+        car.transform.rotation = Quaternion.identity;
 
-        NewCar.name = NewCarProfile.Name;
-        NewCarProfile.Id = Character.Cars.Count + 1;
-        NewCarProfile.Owner = Character;
-
-
-
-
-        Character.Cars.Add(NewCar.GetComponent<CarProfile>());
+        car.GetComponent<CarProfile>().Owner = player;
+        player.Cars.Add(car.GetComponent<CarProfile>());
     }
 }

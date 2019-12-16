@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1604354341}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: MaterialsPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1604354340}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.89, y: 2.29, z: 0}
+  m_LocalPosition: {x: 2.17, y: 1.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6490222683462916237}
@@ -165,6 +165,7 @@ GameObject:
   - component: {fileID: 6490222683462916232}
   - component: {fileID: 6490222683462916246}
   - component: {fileID: 2503652639873362873}
+  - component: {fileID: 1470653846}
   m_Layer: 8
   m_Name: Dodge Caravan
   m_TagString: Untagged
@@ -251,7 +252,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1800
+  m_Mass: 3000
   m_LinearDrag: 0
   m_AngularDrag: 9.7
   m_GravityScale: 1
@@ -467,12 +468,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5e3393c9737cc340a65ce9b6d33fed5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabId: 0
   materialsPoint: {fileID: 1604354341}
   Price: 10000
-  Id: 0
+  Id: 1
   Name: Dodge Caravan
   Owner: {fileID: 0}
   isActive: 0
+--- !u!114 &1470653846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6490222683462916244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7327219af688e384a8b793e214ae2dbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsUsed: 0
+  Capacity: 10000
 --- !u!1 &6490222683689944046
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,7 +617,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6245529197876757838}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: CenterOfmass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -616,7 +632,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8147190674851007569}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.805, z: 0}
+  m_LocalPosition: {x: 0, y: -2.69, z: 0}
   m_LocalScale: {x: 0.48386, y: 0.48386, z: 0.48386}
   m_Children: []
   m_Father: {fileID: 6490222683462916237}

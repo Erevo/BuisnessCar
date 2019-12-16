@@ -7,8 +7,8 @@ public class BuisnessUI : MonoBehaviour
 {
     [SerializeField] Text text;
     [SerializeField] InputField inputField;
-    public int OrderMaterials;
-    Buisness buisness;
+    [HideInInspector] public int OrderMaterials;
+    private Buisness buisness;
     void Start()
     {
         buisness = GetComponent<Buisness>();
@@ -19,8 +19,7 @@ public class BuisnessUI : MonoBehaviour
     {
         text.text =
             $"Balance = {buisness.Balance}\n" +
-            $"Dohod = {buisness.Dohod}/sec\n" +
-            $"ChistyDohod = {buisness.ChistyDohod}/sec\n" +
+            $"Profit = {buisness.Profit}/sec\n" +
             $"Materials = {buisness.Materials}\n";
 
         if (inputField.textComponent.text.Length != 0)

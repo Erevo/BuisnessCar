@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 242629281191560631}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.88, y: 2.11, z: 0}
+  m_LocalPosition: {x: -1.52, y: 0.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6490222683462916237}
@@ -195,6 +195,7 @@ GameObject:
   - component: {fileID: 6490222683462916232}
   - component: {fileID: 6490222683462916246}
   - component: {fileID: 816819489912608416}
+  - component: {fileID: 935470567}
   m_Layer: 8
   m_Name: Porshe 718
   m_TagString: Untagged
@@ -285,7 +286,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 9.7
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5f9ee9d58e7ecb943a958871d4ba682f, type: 2}
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -465,12 +466,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5e3393c9737cc340a65ce9b6d33fed5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabId: 1
   materialsPoint: {fileID: 5384161401980652355}
   Price: 9000
   Id: -1
   Name: Porshe 718
   Owner: {fileID: 0}
   isActive: 0
+--- !u!114 &935470567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6490222683462916244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7327219af688e384a8b793e214ae2dbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsUsed: 0
+  Capacity: 200
 --- !u!1 &6490222683689944046
 GameObject:
   m_ObjectHideFlags: 0

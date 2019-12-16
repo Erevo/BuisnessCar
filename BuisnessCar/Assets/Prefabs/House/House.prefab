@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438223311065579546}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.73, y: -0.58, z: 0}
+  m_LocalPosition: {x: 8.15, y: 0.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 510083413316091141}
@@ -126,7 +126,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -2.4209306, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -137,7 +137,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 9.34, y: 3.6}
+  m_Size: {x: 4.498139, y: 3.6}
   m_EdgeRadius: 0
 --- !u!114 &5577060775463928198
 MonoBehaviour:
@@ -151,5 +151,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63e1af0b3f237d44abcdaa9b8468ab2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnPoint: {fileID: 0}
-  Cars: []
+  CarPrefabs:
+  - {fileID: 6490222683462916244, guid: 453cd400bd2fd874881ee5776253e893, type: 3}
+  - {fileID: 6490222683462916244, guid: 9f2e1cf1e5847e34e8b7e6428bcedb8a, type: 3}
+  - {fileID: 6490222683462916244, guid: 2f0af21cf097db7499a772bee28a567f, type: 3}
+  CarsInGarage: []
+  spawnPoint: {fileID: 1915901888074474694}
+  Item: {fileID: 8736768708585825585, guid: d7b2a74671aff3645ad5c34ec36457d3, type: 3}
+  Content: {fileID: 0}
