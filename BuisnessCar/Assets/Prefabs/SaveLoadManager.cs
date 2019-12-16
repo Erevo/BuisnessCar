@@ -7,7 +7,6 @@ using System;
 public class SaveLoadManager : MonoBehaviour
 {
     private Save sv = new Save();
-    //private CarSave carSave = new CarSave(); 
     private string filePath;
 
 
@@ -29,6 +28,7 @@ public class SaveLoadManager : MonoBehaviour
             LoadGame();
         }
 
+
     }
 
     private void Update()
@@ -40,36 +40,53 @@ public class SaveLoadManager : MonoBehaviour
     }
     public void SaveGame()
     {
-        //sv.Cars = garage.CarsInGarage;
-        //sv.playerMoney = profile.Money;
-
+        sv.playerMoney = profile.Money;
+        sv.Cars.Clear();
         foreach (var car in garage.CarsInGarage)
         {
-            sv.Cars.Add(car);
+            sv.Cars.Add(CarProfileToCarSave(car));
         }
         File.WriteAllText(filePath, JsonUtility.ToJson(sv));
         Debug.Log(JsonUtility.ToJson(sv));
     }
 
+    private CarSave CarProfileToCarSave(CarProfile carProfile)
+    {
+        CarSave carSave = new CarSave
+        {
+            Id = carProfile.Id,
+            IsActive = carProfile.isActive,
+            Name = carProfile.Name,
+            PrefabId = carProfile.prefabId,
+            Price = carProfile.Price
+            
+        };
+        return carSave;
+    }
+    private CarProfile CarSaveToCarProfile(CarSave carSave)
+    {
+        CarProfile carProfile = gameObject.AddComponent<CarProfile>();
+        carProfile.Id = carSave.Id;
+        carProfile.isActive = carSave.IsActive;
+        carProfile.Name = carSave.Name;
+        carProfile.prefabId = carSave.PrefabId;
+        carProfile.Price = carSave.Price;
+        
+        
+        return carProfile;
+    }
+
     public void LoadGame()
     {
-        //LoadCars();
+        LoadCars();
         LoadProfile();
     }
     private void LoadCars()
     {
-        //garage.CarsInGarage = sv.Cars;
         foreach (var car in sv.Cars)
         {
-            CarProfile carProfile = new CarProfile
-            {
-                Id = car.Id,
-                Name = car.Name,
-                prefabId = car.prefabId,
-                Price = car.Price,
-                isActive = car.isActive,
-            };
-            garage.CreateUiButton(carProfile);
+            garage.CreateUiButton(CarSaveToCarProfile(car));
+            Destroy(gameObject.GetComponent<CarProfile>());
         }
     }
     private void LoadProfile()
@@ -86,16 +103,15 @@ public class SaveLoadManager : MonoBehaviour
 [Serializable]
 class Save
 {
-    public List<CarProfile> Cars;
+    public List<CarSave> Cars = new List<CarSave>();
     public int playerMoney;
-    // public List<int> Cars;
 }
 [Serializable]
-public class CarSave
+struct CarSave
 {
-    public int prefabId;
+    public int PrefabId;
     public int Price;
     public int Id;
     public string Name;
-    public bool isActive;
+    public bool IsActive;
 }

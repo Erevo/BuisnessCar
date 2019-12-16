@@ -6,6 +6,7 @@ public class ShopScr : MonoBehaviour
 {
     [SerializeField] Transform spawnPoint;
     [SerializeField] List<CarProfile> CarsCatalog;
+    [SerializeField] Garage garage;
     Profile player;
 
 
@@ -16,7 +17,7 @@ public class ShopScr : MonoBehaviour
     public void BuyCar(int prefabId)
     {
         var ChoosedCar = CarsCatalog.Find(car => car.prefabId == prefabId);
-        ChoosedCar.Id = player.Cars.Count + 1;
+        ChoosedCar.Id = garage.CarsInGarage.Count + 1;
 
         if (player.Money < ChoosedCar.GetComponent<CarProfile>().Price)
             return;

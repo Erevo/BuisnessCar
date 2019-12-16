@@ -252,7 +252,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1800
+  m_Mass: 3000
   m_LinearDrag: 0
   m_AngularDrag: 9.7
   m_GravityScale: 1
@@ -471,7 +471,7 @@ MonoBehaviour:
   prefabId: 0
   materialsPoint: {fileID: 1604354341}
   Price: 10000
-  Id: -1
+  Id: 1
   Name: Dodge Caravan
   Owner: {fileID: 0}
   isActive: 0
