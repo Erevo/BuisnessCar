@@ -9,10 +9,12 @@ using TouchControlsKit;
 public class MovingCar : MonoBehaviour
 {
     Rigidbody2D rb;
+    [SerializeField] bool IsRmotorUsing = true;
+    [SerializeField] bool IsFmotorUsing = true;
     [SerializeField] Transform centerOfmass;
     [SerializeField] float maxSpeed = 100f;
     [SerializeField] float maxTorque = 1000f;
-    [SerializeField] public float Speed;
+    [SerializeField] public double Speed;
 
     [SerializeField] Text txt_speedometr;
 
@@ -42,19 +44,22 @@ public class MovingCar : MonoBehaviour
 
     void Update()
     {
+        FWheel.motor = FMotor;
+        RWheel.motor = RMotor;
+        FWheel.useMotor = IsFmotorUsing;
+        RWheel.useMotor = IsRmotorUsing;
         if (!GetComponent<CarProfile>().isActive)
         {
             FMotor.motorSpeed = 0;
             RMotor.motorSpeed = 0;
 
-            FWheel.motor = FMotor;
-            RWheel.motor = RMotor;
+            //FWheel.motor = FMotor;
+            //RWheel.motor = RMotor;
 
             return;
         }
 
-        FWheel.motor = FMotor;
-        RWheel.motor = RMotor;
+
 
         float horizontal = TCKInput.GetAxis("Joystick", EAxisType.Horizontal);
         if (horizontal < 0 && rb.velocity.x < 0)
@@ -64,19 +69,15 @@ public class MovingCar : MonoBehaviour
             transform.localScale = new Vector3(scale.x, transform.localScale.y, transform.localScale.z);
 
         float radius = GetComponentInChildren<CircleCollider2D>().radius * transform.localScale.y * GetComponentsInChildren<Transform>()[1].localScale.y;
-
-
-
-        Speed = 180 / (radius * 10) * Mathf.PI * maxSpeed / 3.6f * -horizontal;
-
+        Speed = 180f / (radius * Mathf.PI) * ((maxSpeed / 3.6f) * -horizontal);
 
 
 
         txt_speedometr.text = $"{Mathf.Abs(Mathf.RoundToInt(rb.velocity.x * 3.6f))}";
 
 
-        FMotor.motorSpeed = Speed;
-        RMotor.motorSpeed = Speed;
+        FMotor.motorSpeed = (float)Speed;
+        RMotor.motorSpeed = (float)Speed;
 
         RMotor.maxMotorTorque = maxTorque;
         FMotor.maxMotorTorque = maxTorque;

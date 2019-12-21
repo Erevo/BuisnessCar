@@ -252,8 +252,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 3000
-  m_LinearDrag: 0
+  m_Mass: 2000
+  m_LinearDrag: 0.1
   m_AngularDrag: 9.7
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -451,6 +451,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2831931c851de4c4daa8f20b0137814f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsRmotorUsing: 1
+  IsFmotorUsing: 1
   centerOfmass: {fileID: 6245529197876757838}
   maxSpeed: 420
   maxTorque: 100000
@@ -471,7 +473,7 @@ MonoBehaviour:
   prefabId: 0
   materialsPoint: {fileID: 1604354341}
   Price: 10000
-  Id: 1
+  Id: 2
   Name: Dodge Caravan
   Owner: {fileID: 0}
   isActive: 0

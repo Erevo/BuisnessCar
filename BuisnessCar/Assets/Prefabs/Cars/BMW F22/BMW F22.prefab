@@ -188,7 +188,7 @@ Transform:
   - {fileID: 6490222683689944034}
   - {fileID: 7100643105427039183}
   - {fileID: 528518639}
-  - {fileID: 4048984927268570071}
+  - {fileID: 1415273566}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -409,6 +409,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2831931c851de4c4daa8f20b0137814f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Fmotor: 1
+  Rmotor: 1
   centerOfmass: {fileID: 528518639}
   maxSpeed: 150
   maxTorque: 10000
@@ -686,7 +688,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 140994734421419343, guid: 8b7092844b819cc45a19e21479737f40, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8b7092844b819cc45a19e21479737f40, type: 3}
---- !u!4 &4048984927268570071 stripped
+--- !u!4 &1415273566 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4048984926527838685, guid: 8b7092844b819cc45a19e21479737f40,
     type: 3}

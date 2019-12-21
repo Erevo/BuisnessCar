@@ -449,6 +449,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2831931c851de4c4daa8f20b0137814f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Fmotor: 1
+  Rmotor: 1
   centerOfmass: {fileID: 4555053571769564134}
   maxSpeed: 220
   maxTorque: 10000
@@ -469,7 +471,7 @@ MonoBehaviour:
   prefabId: 1
   materialsPoint: {fileID: 5384161401980652355}
   Price: 9000
-  Id: -1
+  Id: 3
   Name: Porshe 718
   Owner: {fileID: 0}
   isActive: 0
